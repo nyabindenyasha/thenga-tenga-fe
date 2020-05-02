@@ -1,0 +1,106 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper" [ngClass]="
+    {
+        'defaultdark': color == 'defaultdark',
+        'mini-sidebar': showMinisidebar
+    }
+">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+
+                    <div class="row text-primary" style="display: inline-block;">
+
+                <a class="navbar-brand text-primary" href="#">
+
+                    <!-- Logo icon --><b>
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+                        &nbsp; &nbsp; 
+                        <img src="assets/images/edu/books.jpg" length="45" width="45" alt="homepage" class="dark-logo" />
+                        <!-- Light Logo icon -->
+                        &nbsp;
+                        <!-- <h3 class="text-primary nav navbar-nav">Online Student Exchange System</h3> -->
+                       
+                    </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text -->
+                    <!-- <span> -->
+                     <!-- dark Logo text -->
+                     <!-- <img src="assets/images/edu/pencil.png" length="45" width="45" alt="homepage" class="light-logo" /> -->
+                     <!-- Light Logo text -->    
+                     <!-- <img src="assets/images/edu/pencil.png" length="45" width="45" alt="homepage" class="light-logo" /></span> </a> -->
+                    
+                     <!-- <img src="assets/images/edu/pencil.png" length="45" width="45" alt="homepage" class="light-logo" />
+                     <img src="assets/images/edu/varsity.png" length="45" width="45" class="light-logo" /> -->
+                     
+                     FLOOD MONITORING AND ALERTING SYSTEM 
+                    </a>
+                   
+                </div>  
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <app-navigation class="w-100" (toggleSidebar)="toggleSidebar()"></app-navigation>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar" [perfectScrollbar]="config">
+            <app-sidebar></app-sidebar> 
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- <app-breadcrumb></app-breadcrumb> -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <router-outlet></router-outlet>
+            <!-- ============================================================== -->
+            <!-- End Start Page Content -->
+            <!-- ============================================================== -->
+            
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <footer class="footer">
+        © 2018 nyabindenyasha@gmail.com
+    </footer>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+
+</div>
